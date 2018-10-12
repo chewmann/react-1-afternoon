@@ -20,15 +20,15 @@ class EvenAndOdd extends Component{
   }
 
   returnEvenAndOdd(userInput){
-    var arr = this.userInput.split(',');
+    var arr = userInput.split(',');
     var evens = [];
     var odds =[];
 
     for (var i = 0; i < arr.length; i++){
       if(arr[i] % 2 === 0){
-        evens.push( parseInt(arr[i], 10));
+        evens.push( parseInt(arr[i], 10) );
       } else {
-        odds.push(parseInt(arr[i],10));
+        odds.push( parseInt(arr[i], 10) );
       }
     }
 
@@ -52,8 +52,8 @@ class EvenAndOdd extends Component{
           <button className="confirmationButton" onClick={()=> {this.returnEvenAndOdd(this.state.userInput)}}>
           Split
           </button>
-          <span className="resultsBox">Evens:[{this.state.evenArray}]</span>
-          <span className="resultsBox">Odds:[{this.state.oddArray}]</span>
+          <span className="resultsBox">Evens:{JSON.stringify(this.state.evenArray)}</span>
+          <span className="resultsBox">Odds:{JSON.stringify(this.state.oddArray)}</span>
         </div>
       )
     }
