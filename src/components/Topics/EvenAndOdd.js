@@ -26,9 +26,9 @@ class EvenAndOdd extends Component{
 
     for (var i = 0; i < arr.length; i++){
       if(arr[i] % 2 === 0){
-        evens.push( parseInt(arr[i], 10) );
+        evens.push(parseInt(arr[i], 10) );
       } else {
-        odds.push( parseInt(arr[i], 10) );
+        odds.push(parseInt(arr[i], 10) );
       }
     }
 
